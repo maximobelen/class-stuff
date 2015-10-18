@@ -1,6 +1,6 @@
 {
   "name": "class-stuff",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A javascript module with: addClass, removeClass and hasClass methods",
   "main": "index.js",
   "scripts": {
