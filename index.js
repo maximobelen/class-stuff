@@ -1,4 +1,5 @@
-var regularExp = '(\\s|^)' + className + '(\\s|$)';
+var regularExp1 = '(\\s|^)',
+regularExp2 = '(\\s|$)';
 
 function ClassStuff () {
   'use strict';
@@ -22,7 +23,7 @@ ClassStuff.prototype.removeClass = function (element, className) {
     element.classList.remove(className);
   } else { 
     if (hasClass(element, className)) {
-      var regClass = new RegExp(regularExp);
+      var regClass = new RegExp(regularExp1 + className + regularExp2);
       element.className = element.className.replace(regClass, ' ');
     }
   }
@@ -32,7 +33,7 @@ ClassStuff.prototype.hasClass = function (element, className) {
   if (element.classList) {
     return element.classList.contains(className);
   } else {
-    return !!element.className.match(new RegExp(regularExp));
+    return !!element.className.match(new RegExp(regularExp1 + className + regularExp2));
   }
 };
 
