@@ -5,7 +5,7 @@
 A javascript module with: addClass, removeClass and hasClass methods
 
 ```js
-var classStuff = require( 'class-stuff' );
+var classStuff = require('class-stuff');
 
 var alertField = document.getElementById('alert-field');
 
