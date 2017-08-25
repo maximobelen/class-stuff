@@ -12,7 +12,7 @@ ClassStuff.prototype.addClass = function (element, className) {
   if (element.classList) {
     element.classList.add(className);
   } else {
-    if (!hasClass(element, className)) {
+    if (!this.hasClass(element, className)) {
       element.className += " " + className;
     }
   }
@@ -22,7 +22,7 @@ ClassStuff.prototype.removeClass = function (element, className) {
   if (element.classList) {
     element.classList.remove(className);
   } else { 
-    if (hasClass(element, className)) {
+    if (this.hasClass(element, className)) {
       var regClass = new RegExp(regularExp1 + className + regularExp2);
       element.className = element.className.replace(regClass, ' ');
     }
